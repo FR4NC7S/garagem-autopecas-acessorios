@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/[0.06]">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="relative w-40 h-10">
+            <div className="relative w-48 h-12">
               <Image
                 src={COMPANY_DATA.images.logo}
                 alt="Garagem Autopeças"

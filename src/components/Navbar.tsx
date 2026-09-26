@@ -40,14 +40,14 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <Link href="#inicio" aria-label="Garagem Autopeças - Início">
-            <div className="relative w-40 sm:w-48 h-10 sm:h-11">
+            <div className="relative w-52 sm:w-60 h-12 sm:h-14">
               <Image
                 src={COMPANY_DATA.images.logo}
                 alt="Garagem Autopeças"
                 fill
                 priority
                 className="object-contain object-left"
-                sizes="(max-width: 640px) 160px, 192px"
+                sizes="(max-width: 640px) 208px, 240px"
               />
             </div>
           </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
           }`}
         >
           <div className="flex items-center justify-between pb-6 border-b border-white/[0.06]">
-            <div className="relative w-32 h-8">
+            <div className="relative w-40 h-10">
               <Image src={COMPANY_DATA.images.logo} alt="Garagem" fill className="object-contain object-left" />
             </div>
             <button onClick={() => setMenuOpen(false)} className="p-2 text-gray-400 hover:text-white" aria-label="Fechar">
