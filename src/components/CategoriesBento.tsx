@@ -1,5 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { FaGears, FaCarBattery, FaOilCan, FaSprayCanSparkles } from "react-icons/fa6";
+import { FaGears, FaCarBattery, FaOilCan, FaCarSide } from "react-icons/fa6";
 import { COMPANY_DATA } from "@/data/company";
 
 export default function CategoriesBento() {
@@ -36,7 +36,7 @@ export default function CategoriesBento() {
       title: "Acessórios",
       badge: "Cuidado & Estética",
       description: "Palhetas, lâmpadas, aromatizantes e produtos de estética automotiva.",
-      icon: FaSprayCanSparkles,
+      icon: FaCarSide,
       items: ["Palhetas", "Lâmpadas", "Estética", "Aromatizantes"],
       whatsappMsg: "Olá! Gostaria de solicitar um orçamento de acessórios na Garagem.",
     },
