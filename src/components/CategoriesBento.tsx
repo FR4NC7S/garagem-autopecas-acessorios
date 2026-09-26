@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
-import { HiOutlineWrenchScrewdriver, HiOutlineBolt, HiOutlineBeaker, HiOutlineSparkles } from "react-icons/hi2";
+import { FaGears, FaCarBattery, FaOilCan, FaSprayCanSparkles } from "react-icons/fa6";
 import { COMPANY_DATA } from "@/data/company";
 
 export default function CategoriesBento() {
@@ -8,42 +7,38 @@ export default function CategoriesBento() {
     {
       id: "autopecas",
       title: "Autopeças",
+      badge: "Mecânica & Elétrica",
       description: "Freios, suspensão, filtros, correias, ignição e componentes de motor.",
-      icon: HiOutlineWrenchScrewdriver,
-      image: COMPANY_DATA.images.interior,
-      imageAlt: "Estoque de autopeças na Garagem",
-      isLarge: true,
-      whatsappMsg: "Olá, gostaria de consultar autopeças para o meu veículo.",
+      icon: FaGears,
+      items: ["Suspensão", "Freios", "Filtros", "Motor", "Injeção"],
+      whatsappMsg: "Olá! Gostaria de solicitar um orçamento de autopeças na Garagem.",
     },
     {
       id: "baterias",
       title: "Baterias",
-      description: "Baterias para carros de passeio, picapes e utilitários.",
-      icon: HiOutlineBolt,
-      image: COMPANY_DATA.images.balcao,
-      imageAlt: "Baterias automotivas",
-      isLarge: false,
-      whatsappMsg: "Olá, gostaria de consultar baterias na Garagem.",
+      badge: "Diversas Amperagens",
+      description: "Baterias confiáveis para carros de passeio, pick-ups e utilitários.",
+      icon: FaCarBattery,
+      items: ["Passeio", "Pick-ups", "Utilitários", "Consulte modelo"],
+      whatsappMsg: "Olá! Gostaria de solicitar um orçamento de baterias na Garagem.",
     },
     {
       id: "lubrificantes",
       title: "Lubrificantes",
-      description: "Óleos minerais, semissintéticos e sintéticos. Fluidos de freio e direção.",
-      icon: HiOutlineBeaker,
-      image: COMPANY_DATA.images.balcao,
-      imageAlt: "Lubrificantes automotivos",
-      isLarge: false,
-      whatsappMsg: "Olá, gostaria de consultar lubrificantes na Garagem.",
+      badge: "Óleos & Fluidos",
+      description: "Óleos sintéticos, semissintéticos e minerais. Fluidos de freio e aditivos.",
+      icon: FaOilCan,
+      items: ["Óleo sintético", "Fluidos de freio", "Aditivos", "Direção"],
+      whatsappMsg: "Olá! Gostaria de solicitar um orçamento de lubrificantes na Garagem.",
     },
     {
       id: "acessorios",
       title: "Acessórios",
-      description: "Palhetas, lâmpadas, aromatizantes e produtos de limpeza automotiva.",
-      icon: HiOutlineSparkles,
-      image: COMPANY_DATA.images.interior,
-      imageAlt: "Acessórios automotivos",
-      isLarge: false,
-      whatsappMsg: "Olá, gostaria de consultar acessórios na Garagem.",
+      badge: "Cuidado & Estética",
+      description: "Palhetas, lâmpadas, aromatizantes e produtos de estética automotiva.",
+      icon: FaSprayCanSparkles,
+      items: ["Palhetas", "Lâmpadas", "Estética", "Aromatizantes"],
+      whatsappMsg: "Olá! Gostaria de solicitar um orçamento de acessórios na Garagem.",
     },
   ];
 
@@ -53,58 +48,67 @@ export default function CategoriesBento() {
         {/* Header */}
         <div className="max-w-xl mb-12">
           <p className="text-[#C43A35] text-sm font-semibold uppercase tracking-wider mb-3">
-            Produtos
+            Linha de Produtos
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            Tudo para o seu carro
+            Tudo para o seu carro em um só lugar
           </h2>
+          <p className="mt-3 text-sm text-gray-400">
+            Peças selecionadas para pronta entrega ou retirada no balcão.
+          </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Grid de Ícones Automotivos */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {categories.map((cat) => {
             const Icon = cat.icon;
             return (
               <article
                 key={cat.id}
-                className={`group relative rounded-2xl overflow-hidden bg-[#111318] border border-white/[0.06] hover:border-[#C43A35]/40 transition-all duration-300 ${
-                  cat.isLarge ? "lg:col-span-2" : ""
-                }`}
+                className="group relative rounded-2xl bg-[#111318] border border-white/[0.08] hover:border-[#C43A35]/50 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#C43A35]/5"
               >
-                {/* Image */}
-                <div className="relative h-48 sm:h-56 overflow-hidden">
-                  <Image
-                    src={cat.image}
-                    alt={cat.imageAlt}
-                    fill
-                    sizes={cat.isLarge ? "(max-width: 1024px) 100vw, 66vw" : "(max-width: 1024px) 100vw, 33vw"}
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111318] via-[#111318]/50 to-transparent" />
-
-                  {/* Icon badge */}
-                  <div className="absolute top-4 right-4 w-10 h-10 rounded-xl bg-[#C43A35] text-white flex items-center justify-center">
-                    <Icon className="w-5 h-5" />
+                <div>
+                  {/* Ícone de Destaque */}
+                  <div className="w-14 h-14 rounded-2xl bg-[#C43A35]/10 text-[#C43A35] group-hover:bg-[#C43A35] group-hover:text-white flex items-center justify-center mb-6 transition-colors duration-300 shadow-sm">
+                    <Icon className="w-7 h-7" />
                   </div>
-                </div>
 
-                {/* Content */}
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-white mb-1.5">
+                  {/* Badge sutil */}
+                  <span className="text-[11px] font-semibold text-gray-400 tracking-wider uppercase block mb-1">
+                    {cat.badge}
+                  </span>
+
+                  <h3 className="text-xl font-bold text-white group-hover:text-[#C43A35] transition-colors mb-2">
                     {cat.title}
                   </h3>
+
                   <p className="text-sm text-gray-400 leading-relaxed mb-4">
                     {cat.description}
                   </p>
 
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5 mb-6">
+                    {cat.items.map((item, idx) => (
+                      <span
+                        key={idx}
+                        className="text-[11px] font-medium px-2 py-0.5 rounded-md bg-white/[0.04] text-gray-300 border border-white/[0.05]"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Botão de Solicitar Orçamento */}
+                <div className="pt-4 border-t border-white/[0.06]">
                   <a
                     href={COMPANY_DATA.getWhatsAppUrl(cat.whatsappMsg)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[#C43A35] hover:text-[#e0635e] transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white/[0.05] group-hover:bg-[#C43A35] text-white text-xs sm:text-sm font-semibold transition-all duration-200"
                   >
-                    <FaWhatsapp className="w-4 h-4" />
-                    Consultar disponibilidade
+                    <FaWhatsapp className="w-4 h-4 text-[#25D366] group-hover:text-white transition-colors" />
+                    <span>Solicitar orçamento</span>
                   </a>
                 </div>
               </article>
