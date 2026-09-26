@@ -1,16 +1,23 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --brand-red: #D32F2F;
-    --brand-red-hover: #B71C1C;
-    --brand-black: #0A0A0F;
-    --brand-graphite: #111318;
-    --brand-card: #161921;
-    --brand-border: #1E2130;
-    --brand-white: #ffffff;
-    --brand-muted: #8B8FA3;
-  }
+@theme {
+  --color-brand-red: #C43A35;
+  --color-brand-red-hover: #A62B27;
+  --color-brand-gray: #3F3E3E;
+  --color-brand-gray-light: #5A5959;
+}
+
+:root {
+  --brand-red: #C43A35;
+  --brand-red-hover: #A62B27;
+  --brand-black: #0A0A0F;
+  --brand-graphite: #111318;
+  --brand-card: #161921;
+  --brand-border: #3F3E3E;
+  --brand-gray: #3F3E3E;
+  --brand-white: #ffffff;
+  --brand-muted: #3F3E3E;
+}
 
   html {
     scroll-behavior: smooth;
@@ -29,7 +36,6 @@
     font-weight: 700;
     letter-spacing: -0.02em;
   }
-}
 
 /* Subtle dot pattern for dark sections */
 .bg-dot-pattern {

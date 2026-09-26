@@ -29,7 +29,7 @@ export default function Differentials() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-[#D32F2F] text-sm font-semibold uppercase tracking-wider mb-3">
+          <p className="text-[#C43A35] text-sm font-semibold uppercase tracking-wider mb-3">
             Diferenciais
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -44,16 +44,16 @@ export default function Differentials() {
             return (
               <div
                 key={i}
-                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#D32F2F]/30 hover:shadow-lg transition-all duration-300"
+                className="group p-6 rounded-2xl bg-white border border-[#3F3E3E]/15 hover:border-[#C43A35]/40 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-red-50 text-[#D32F2F] flex items-center justify-center mb-5 group-hover:bg-[#D32F2F] group-hover:text-white transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-[#C43A35]/10 text-[#C43A35] flex items-center justify-center mb-5 group-hover:bg-[#C43A35] group-hover:text-white transition-colors duration-300">
                   <Icon className="w-6 h-6" />
                 </div>
 
                 <h3 className="text-base font-bold text-gray-900 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm text-[#3F3E3E] leading-relaxed">
                   {item.description}
                 </p>
               </div>

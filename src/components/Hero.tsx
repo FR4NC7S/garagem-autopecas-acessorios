@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.08] border border-white/[0.1] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D32F2F]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C43A35]" />
             <span className="text-xs font-medium text-gray-300 uppercase tracking-wider">
               Loja física em Rio Branco/AC
             </span>
@@ -36,7 +36,7 @@ export default function Hero() {
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] mb-5">
             Peças e acessórios para quem{" "}
-            <span className="text-[#D32F2F]">cuida do carro</span> de verdade.
+            <span className="text-[#C43A35]">cuida do carro</span> de verdade.
           </h1>
 
           {/* Subtitle */}
@@ -51,7 +51,7 @@ export default function Hero() {
               href={COMPANY_DATA.getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#D32F2F] text-white font-semibold text-base hover:bg-[#B71C1C] transition-colors"
+              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#C43A35] text-white font-semibold text-base hover:bg-[#A62B27] transition-colors"
             >
               <FaWhatsapp className="w-5 h-5" />
               Chamar no WhatsApp
@@ -60,7 +60,7 @@ export default function Hero() {
               href="#localizacao"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] text-white font-medium border border-white/[0.1] transition-colors"
             >
-              <HiOutlineLocationMarker className="w-5 h-5 text-[#D32F2F]" />
+              <HiOutlineLocationMarker className="w-5 h-5 text-[#C43A35]" />
               Como chegar
             </a>
           </div>

@@ -52,7 +52,7 @@ export default function CategoriesBento() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="max-w-xl mb-12">
-          <p className="text-[#D32F2F] text-sm font-semibold uppercase tracking-wider mb-3">
+          <p className="text-[#C43A35] text-sm font-semibold uppercase tracking-wider mb-3">
             Produtos
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
@@ -67,7 +67,7 @@ export default function CategoriesBento() {
             return (
               <article
                 key={cat.id}
-                className={`group relative rounded-2xl overflow-hidden bg-[#111318] border border-white/[0.06] hover:border-[#D32F2F]/40 transition-all duration-300 ${
+                className={`group relative rounded-2xl overflow-hidden bg-[#111318] border border-white/[0.06] hover:border-[#C43A35]/40 transition-all duration-300 ${
                   cat.isLarge ? "lg:col-span-2" : ""
                 }`}
               >
@@ -83,7 +83,7 @@ export default function CategoriesBento() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111318] via-[#111318]/50 to-transparent" />
 
                   {/* Icon badge */}
-                  <div className="absolute top-4 right-4 w-10 h-10 rounded-xl bg-[#D32F2F] text-white flex items-center justify-center">
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-xl bg-[#C43A35] text-white flex items-center justify-center">
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export default function CategoriesBento() {
                     href={COMPANY_DATA.getWhatsAppUrl(cat.whatsappMsg)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[#D32F2F] hover:text-red-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#C43A35] hover:text-[#e0635e] transition-colors"
                   >
                     <FaWhatsapp className="w-4 h-4" />
                     Consultar disponibilidade

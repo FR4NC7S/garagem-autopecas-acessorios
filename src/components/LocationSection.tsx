@@ -8,7 +8,7 @@ export default function LocationSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-[#D32F2F] text-sm font-semibold uppercase tracking-wider mb-3">
+          <p className="text-[#C43A35] text-sm font-semibold uppercase tracking-wider mb-3">
             Localização
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
@@ -22,7 +22,7 @@ export default function LocationSection() {
             {/* Address */}
             <div>
               <div className="flex items-start gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-[#D32F2F]/10 text-[#D32F2F] flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#C43A35]/10 text-[#C43A35] flex items-center justify-center shrink-0">
                   <HiOutlineMapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -37,7 +37,7 @@ export default function LocationSection() {
                 href={COMPANY_DATA.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-semibold text-sm transition-colors mb-6"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#C43A35] hover:bg-[#A62B27] text-white font-semibold text-sm transition-colors mb-6"
               >
                 <HiOutlineMapPin className="w-4 h-4" />
                 Abrir no Google Maps
@@ -48,7 +48,7 @@ export default function LocationSection() {
 
               {/* Hours */}
               <div className="flex items-center gap-2 mb-4">
-                <HiOutlineClock className="w-4 h-4 text-[#D32F2F]" />
+                <HiOutlineClock className="w-4 h-4 text-[#C43A35]" />
                 <h3 className="text-sm font-bold text-white uppercase tracking-wider">Horários</h3>
               </div>
 
@@ -66,7 +66,7 @@ export default function LocationSection() {
 
             {/* Phone */}
             <div className="mt-6 pt-5 border-t border-white/[0.06] flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-white/[0.04] text-[#D32F2F] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-lg bg-white/[0.04] text-[#C43A35] flex items-center justify-center">
                 <HiOutlinePhone className="w-4 h-4" />
               </div>
               <div>
@@ -75,7 +75,7 @@ export default function LocationSection() {
                   href={COMPANY_DATA.getWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-bold text-white hover:text-[#D32F2F] transition-colors"
+                  className="text-sm font-bold text-white hover:text-[#C43A35] transition-colors"
                 >
                   {COMPANY_DATA.phoneDisplay}
                 </a>

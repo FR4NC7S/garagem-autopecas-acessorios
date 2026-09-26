@@ -71,7 +71,7 @@ export default function Footer() {
           {/* Hours */}
           <div>
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-1.5">
-              <HiOutlineClock className="w-3.5 h-3.5 text-[#D32F2F]" />
+              <HiOutlineClock className="w-3.5 h-3.5 text-[#C43A35]" />
               Horários
             </h3>
             <div className="space-y-2 text-sm">
@@ -85,7 +85,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="text-gray-500 block">Domingo</span>
-                <span className="text-[#D32F2F] font-medium">Fechado</span>
+                <span className="text-[#C43A35] font-medium">Fechado</span>
               </div>
             </div>
           </div>
@@ -95,17 +95,17 @@ export default function Footer() {
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Contato</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
-                <HiOutlineMapPin className="w-4 h-4 text-[#D32F2F] shrink-0 mt-0.5" />
+                <HiOutlineMapPin className="w-4 h-4 text-[#C43A35] shrink-0 mt-0.5" />
                 <span className="text-gray-400">{COMPANY_DATA.address}</span>
               </div>
               <div className="flex items-center gap-2">
-                <HiOutlinePhone className="w-4 h-4 text-[#D32F2F] shrink-0" />
+                <HiOutlinePhone className="w-4 h-4 text-[#C43A35] shrink-0" />
                 <a href={COMPANY_DATA.getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   {COMPANY_DATA.phoneDisplay}
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <FaInstagram className="w-4 h-4 text-[#D32F2F] shrink-0" />
+                <FaInstagram className="w-4 h-4 text-[#C43A35] shrink-0" />
                 <a href={COMPANY_DATA.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   {COMPANY_DATA.instagram}
                 </a>

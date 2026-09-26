@@ -69,7 +69,7 @@ export default function Navbar() {
               href={COMPANY_DATA.getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#D32F2F] text-white text-sm font-semibold hover:bg-[#B71C1C] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#C43A35] text-white text-sm font-semibold hover:bg-[#A62B27] transition-colors"
             >
               <FaWhatsapp className="w-4 h-4" />
               Falar no WhatsApp
@@ -81,7 +81,7 @@ export default function Navbar() {
               href={COMPANY_DATA.getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-lg bg-[#D32F2F] text-white"
+              className="p-2.5 rounded-lg bg-[#C43A35] text-white hover:bg-[#A62B27] transition-colors"
               aria-label="WhatsApp"
             >
               <FaWhatsapp className="w-5 h-5" />
@@ -136,7 +136,7 @@ export default function Navbar() {
               href={COMPANY_DATA.getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3.5 rounded-xl bg-[#D32F2F] text-white font-semibold text-center flex items-center justify-center gap-2"
+              className="w-full py-3.5 rounded-xl bg-[#C43A35] hover:bg-[#A62B27] text-white font-semibold text-center flex items-center justify-center gap-2 transition-colors"
             >
               <FaWhatsapp className="w-5 h-5" />
               Falar no WhatsApp
