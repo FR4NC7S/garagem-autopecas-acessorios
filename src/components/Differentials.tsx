@@ -1,108 +1,64 @@
-import { Layers, Users, Store, Truck, ArrowRight } from "lucide-react";
-import { COMPANY_DATA } from "@/data/company";
+import { HiOutlineCube, HiOutlineUserGroup, HiOutlineBuildingStorefront, HiOutlineTruck } from "react-icons/hi2";
 
 export default function Differentials() {
-  const differentials = [
+  const items = [
     {
       title: "Variedade de produtos",
-      description:
-        "Ampla seleção de autopeças mecânicas e elétricas, baterias de várias amperagens, óleos lubrificantes e acessórios para diferentes marcas e modelos.",
-      icon: Layers,
+      description: "Autopeças mecânicas e elétricas, baterias, lubrificantes e acessórios para diferentes marcas e modelos.",
+      icon: HiOutlineCube,
     },
     {
       title: "Atendimento especializado",
-      description:
-        "Atendimento focado em orientar você com rapidez na identificação da peça ou do produto correto para a manutenção do seu veículo.",
-      icon: Users,
+      description: "Orientação rápida para identificar a peça correta para a manutenção do seu veículo.",
+      icon: HiOutlineUserGroup,
     },
     {
-      title: "Loja física em Rio Branco",
-      description:
-        "Espaço estruturado e de portas abertas na Av. Sobral, 521. Venha conferir as peças pessoalmente ou retirar seu pedido no balcão.",
-      icon: Store,
+      title: "Loja física",
+      description: "Espaço estruturado na Av. Sobral, 521. Confira as peças pessoalmente ou retire no balcão.",
+      icon: HiOutlineBuildingStorefront,
     },
     {
-      title: "Entrega em Rio Branco e região",
-      description:
-        "Praticidade para motoristas e profissionais: consulte a disponibilidade e receba sua peça com agilidade onde estiver na capital e proximidades.",
-      icon: Truck,
+      title: "Entrega na região",
+      description: "Receba sua peça em Rio Branco e região com agilidade. Consulte disponibilidade.",
+      icon: HiOutlineTruck,
     },
   ];
 
   return (
-    <section id="diferenciais" className="relative py-20 lg:py-28 bg-[#F8FAFC] text-gray-900 overflow-hidden">
-      {/* Padrão decorativo sutil para fundo claro */}
-      <div className="absolute inset-0 bg-light-pattern opacity-60 pointer-events-none" />
-
-      {/* Detalhe diagonal vermelho sutil no topo do bloco claro */}
-      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-600 via-red-500 to-red-600" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Cabeçalho */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
-            <span>Diferenciais Reais</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-950">
-            Por que escolher a <span className="text-red-600">Garagem?</span>
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-            Transparência, agilidade e estrutura física para atender com seriedade quem cuida do carro em Rio Branco.
+    <section id="diferenciais" className="relative py-20 lg:py-24 bg-[#F7F8FA] text-gray-900">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <p className="text-[#D32F2F] text-sm font-semibold uppercase tracking-wider mb-3">
+            Diferenciais
           </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            Por que escolher a Garagem?
+          </h2>
         </div>
 
-        {/* Grid de 4 Cards de Diferenciais Premium em Fundo Claro */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {differentials.map((item, index) => {
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {items.map((item, i) => {
             const Icon = item.icon;
             return (
               <div
-                key={index}
-                className="group relative p-8 rounded-2xl bg-white border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-red-600/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                key={i}
+                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#D32F2F]/30 hover:shadow-lg transition-all duration-300"
               >
-                <div>
-                  {/* Ícone com destaque vermelho */}
-                  <div className="w-14 h-14 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                    <Icon className="w-7 h-7" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                    {item.description}
-                  </p>
+                <div className="w-12 h-12 rounded-xl bg-red-50 text-[#D32F2F] flex items-center justify-center mb-5 group-hover:bg-[#D32F2F] group-hover:text-white transition-colors duration-300">
+                  <Icon className="w-6 h-6" />
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-gray-400 group-hover:text-red-600 transition-colors">
-                  <span>Padrão Garagem</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </div>
+                <h3 className="text-base font-bold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             );
           })}
-        </div>
-
-        {/* Barra de ação rápida */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-gray-900 via-gray-950 to-gray-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-gray-800">
-          <div>
-            <h4 className="text-lg sm:text-xl font-bold text-white">
-              Quer tirar uma dúvida sobre disponibilidade de peça?
-            </h4>
-            <p className="text-sm text-gray-400 mt-1">
-              Fale diretamente com nossa equipe no WhatsApp pelo {COMPANY_DATA.phoneDisplay}
-            </p>
-          </div>
-          <a
-            href={COMPANY_DATA.getWhatsAppUrl("Olá! Gostaria de consultar uma peça na Garagem.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-md shadow-red-600/30 transition-all shrink-0 active:scale-95"
-          >
-            <span>Falar com especialista</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
         </div>
       </div>
     </section>

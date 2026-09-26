@@ -2,75 +2,48 @@
 
 @layer base {
   :root {
-    --brand-red: #e51e2b;
-    --brand-red-hover: #c8101e;
-    --brand-red-dark: #8b0000;
-    --brand-black: #090a0d;
-    --brand-graphite: #12141a;
-    --brand-graphite-card: #181b22;
-    --brand-gray-border: #262933;
+    --brand-red: #D32F2F;
+    --brand-red-hover: #B71C1C;
+    --brand-black: #0A0A0F;
+    --brand-graphite: #111318;
+    --brand-card: #161921;
+    --brand-border: #1E2130;
     --brand-white: #ffffff;
-    --brand-light-bg: #f8fafc;
+    --brand-muted: #8B8FA3;
   }
 
   html {
     scroll-behavior: smooth;
-    color-scheme: dark light;
   }
 
   body {
     background-color: var(--brand-black);
-    color: #e5e7eb;
+    color: #E2E4EC;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Better default heading weight */
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 }
 
-/* Efeito sutil de fibra de carbono/metal escuro para áreas selecionadas */
-.bg-carbon-pattern {
-  background-color: #0b0c10;
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0),
-    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 0);
-  background-size: 16px 16px;
-  background-position: 0 0, 8px 8px;
+/* Subtle dot pattern for dark sections */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-/* Padrão sutil para áreas claras */
-.bg-light-pattern {
-  background-color: #f8fafc;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0);
-  background-size: 20px 20px;
+/* Subtle dot pattern for light sections */
+.bg-dot-pattern-light {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-/* Glow vermelho suave */
-.shadow-red-glow {
-  box-shadow: 0 0 35px -5px rgba(229, 30, 43, 0.28);
-}
-
-.shadow-red-glow-sm {
-  box-shadow: 0 0 18px -2px rgba(229, 30, 43, 0.35);
-}
-
-/* Corte diagonal inspirado no logotipo */
-.clip-diagonal-left {
-  clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
-}
-
-.clip-diagonal-right {
-  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.clip-badge-slant {
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%);
-}
-
-/* Linha divisora com gradiente vermelho */
-.divider-red-line {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #e51e2b, #ffffff, #e51e2b, transparent);
-}
-
-/* Evita quebras de texto indesejadas em números de telefone e marcas */
+/* Keep phone numbers and brands on one line */
 .keep-together {
   word-break: keep-all;
   white-space: nowrap;
